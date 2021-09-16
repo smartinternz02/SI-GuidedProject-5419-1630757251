@@ -1,0 +1,367 @@
+<!--This defines the home page of the flask model--->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+	<title>Home Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<style>
+		body {
+			font: 400 15px Segoe UI , sans-serif;
+			line-height: 1.8;
+			color: #818181;
+		}
+	  
+		h2 {
+			font-size: 24px;
+			text-transform: uppercase;
+			color: #303030;
+			font-weight: 600;
+			margin-bottom: 30px;
+		}
+		
+		h4 {
+			font-size: 19px;
+			line-height: 1.375em;
+			color: #303030;
+			font-weight: 400;
+			margin-bottom: 30px;
+		}  
+	  
+		.jumbotron {
+			background-color: #f4511e;
+			color: #fff;
+			font-family: Montserrat, sans-serif;
+		}
+	  
+		.container-fluid {
+			padding: 60px 50px;
+		}
+	  
+		.bg-grey {
+			background-color: #f6f6f6;
+		}
+	  
+		.logo-small {
+			color: #f4511e;
+			font-size: 50px;
+		}
+		
+		.logo {
+			color: #f4511e;
+			font-size: 200px;
+		}
+		
+		.thumbnail {
+			padding: 0 0 15px 0;
+			border: none;
+			border-radius: 0;
+		}
+		
+		.thumbnail img {
+			width: 100%;
+			height: 100%;
+			margin-bottom: 10px;
+		}
+
+		.item h4 {
+			font-size: 19px;
+			line-height: 1.375em;
+			font-weight: 400;
+			font-style: italic;
+			margin: 70px 0;
+		}
+		
+		.item span {
+			font-style: normal;
+		}
+	  
+		
+		.navbar {
+			margin-bottom: 0;
+			background-color: #fc8403;
+			z-index: 9999;
+			border: 0;
+			font-size: 12px !important;
+			line-height: 1.42857143 !important;
+			letter-spacing: 4px;
+			border-radius: 0;
+			font-family: Montserrat, sans-serif;
+		}
+		
+		.navbar li a, .navbar .navbar-brand {
+			color: #fff !important;
+		}
+	  
+		.navbar-nav li a:hover, .navbar-nav li.active a {
+			color: #f4511e !important;
+			background-color: #fff !important;
+		}
+	  
+		.navbar-default .navbar-toggle {
+			border-color: transparent;
+			color: #fff !important;
+		}
+
+		.container {
+			padding: 16px;
+			max-width: max-content;
+		}
+
+		.container {
+			  max-width: 1376px;
+			  margin: auto;
+			  padding: 2rem 1.5rem;
+		}
+
+		.cards {
+			  display: flex;
+			  flex-wrap: wrap;
+			  align-items: center;
+			  justify-content: center;
+			}
+			
+		.card {
+			cursor: pointer;
+			background-color: transparent;
+			height: 300px;
+			perspective: 1000px;
+			margin: 1rem;
+			align-items: center;
+			justify-content: center;
+		}
+			
+		.card h3 {
+			border-bottom: 1px #fff solid;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+			text-align: center;
+			font-size: 1.6rem;
+			word-spacing: 3px;
+		}
+			
+		.card p{
+			opacity: 0.75;
+			font-size: 0.8rem;
+			line-height: 1.4;
+		}
+			
+		.card img {
+			width: 360px;
+			height: 300px;
+			object-fit: cover;
+			border-radius: 3px;
+		}
+			
+		.card-inner {
+			position: relative;
+			width: 360px;
+			height: 100%;
+			transition: transform 0.9s;
+			transform-style: preserve-3d;
+		}
+			
+		.text-block {
+			
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			background-color: black;
+			color: white;
+			  
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		
+		.onit {
+			background-color: #fcb103;
+		}
+		
+		.go {
+			padding: 20px;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			background-color: #ff8000;
+			height: 500px;
+			border: solid black;
+			width: 300px;
+			margin: auto;
+			padding: 20px;
+			opacity: 0.7;
+			border-radius: 0%;
+		}
+		
+
+	</style>
+</head>
+
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/home">NATURAL DISASTERS</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class ="onit" href="/home">HOME</a></li>
+        <li><a href="/intro">INTRO</a></li>
+        <li><a href="/upload">LIVE FEED</a></li>
+        <li><a href="/video">VIDEO UPLOAD</a></li>
+        <li><a href="/image">IMAGE UPLOAD</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center" >
+  <br><br><br>
+  <h1>AI-Based Natural Disaster Intensity Analysis using IBM Watson</h1>  
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid" style="align-items: center; align-content: center;">
+  <div class="row">
+    <div class="text-center" style="align-items: center; align-content: center; padding-left: 25px;padding-right: 25px;">
+		<center><h1 style="color: black; font-weight: bold;">Natural Disaster</h1></center>
+		
+		<br>
+		
+		<h3 style="color: black;">Natural Disasters are Nature's Way of making humans comprehend, that they are not the strongest forces. Not even on the planet, let alone the universe.</h3><br>
+		<h3 style="color: black;">Nature's strong forces wipe out areas in a matter of seconds, that took mankind decades to build. Whether it be Cyclones,
+			Earthquakes, Floods or Wild Fire, the destruction caused is irreparable. 
+			We need to remember, that nature is trying to teach us a lesson. Anything we do to her, 
+			such as deforestation, pollution, genocide, trafficking, she can do worse to us, and more so, righteously.
+			<br><br><br>
+			Today, we extend this humble request to all the readers of this prototype website, please do your part in protecting
+			mankind from the wrath of Mother Nature; she is vicious, ferocious, agile, and right.
+			</h3>	
+			
+	</div>
+  </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container">
+
+        <div class="cards">
+			<center>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1454789476662-53eb23ba5907?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=689&q=80"
+                            alt="">
+                        <div class="text-block">
+                            <h1>Cyclone</h1>
+                            <h3>violent winds, torrential rain, high waves and, very destructive storm</h3>
+                        </div>
+
+                    </div>
+                </div>
+					<div>
+                        <h3>Cyclone</h3>
+                        <h3>Cyclones can be the most intense storms on Earth. A cyclone is a system of winds rotating counterclockwise in the Northern Hemisphere around a low pressure center. The swirling air rises and cools, creating clouds and precipitation.</h3>
+                    </div>
+            </div>
+			
+
+			<br><br><br><br>
+            <div class="container">
+
+                <div class="cards">
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="https://images.unsplash.com/photo-1603869311144-66b03d340b32?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8ZWFydGhxdWFrZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                    alt="">
+                                <div class="text-block">
+                                    <h1>Earth Quake</h1>
+                                    <h3>Sudden release of stored energy in the Earth's crust that creates seismic waves.
+                                    </h3>
+                                </div>
+
+                            </div>
+                        </div>
+							<div>
+                                <h3>Earth Quake</h3>
+                                <h3>An earthquake is what happens when two blocks of the earth suddenly slip past one another. The surface where they slip is called the fault or fault plane. The location below the earth’s surface where the earthquake starts is called the hypocenter, and the location directly above it on the surface of the earth is called the epicenter.</h3>
+                            </div>
+                    </div>
+
+
+				<br><br><br><br><br>
+                    <div class="container">
+
+                        <div class="cards">
+
+                            <div class="card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Zmxvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                            alt="">
+                                        <div class="text-block">
+                                            <h1>Flood</h1>
+                                            <h3>A flood is an overflow of water on normally dry ground</h3>
+                                        </div>
+
+                                    </div>
+                                </div>
+								
+								<div>
+                                    <h3>Flood</h3>
+                                    <h3>Flooding is an overflowing of water onto land that is normally dry. Floods can happen during heavy rains, when ocean waves come on shore, when snow melts quickly, or when dams or levees break. Damaging flooding may happen with only a few inches of water, or it may cover a house to the rooftop. Floods can occur within minutes or over a long period, and may last days, weeks, or longer. Floods are the most common and widespread of all weather-related natural disasters.</h3>
+                                </div>
+                            </div>
+
+
+				<br><br><br><br><br><br>
+                            <div class="container">
+
+                                <div class="cards">
+
+                                    <div class="card">
+                                        <div class="card-inner">
+                                            <div class="card-front">
+                                                <img src="https://images.unsplash.com/photo-1473260079709-83c808703435?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8d2lsZGZpcmV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                                    alt="">
+                                                <div class="text-block">
+                                                    <h1>WildFire</h1>
+                                                    <h3>Uncontrolled fire in a forest, grassland, brushland</h3>
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+										
+										<div>
+                                            <h3>Wildfire</h3>
+                                            <h3>A wildfire is an uncontrolled fire that burns in the wildland vegetation, often in rural areas. Wildfires can burn in forests, grasslands, savannas, and other ecosystems, and have been doing so for hundreds of millions of years. They are not limited to a particular continent or environment. Wildfires can burn in vegetation located both in and above the soil. </h3>
+                                        </div>
+											
+                                    </div>
+									
+								</div>
+							</div>
+					</div>
+					</center>
+					
+	<br><br><br><br>
+
+</body>
+</html>

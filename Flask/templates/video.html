@@ -1,0 +1,152 @@
+<!--This defines the upload page of the flask model--->
+
+
+<!doctype html>
+<html>
+
+<head>
+    <title>Upload Media</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+	<style>
+		h2 {
+			font-size: 24px;
+			text-transform: uppercase;
+			color: #303030;
+			font-weight: 600;
+			margin-bottom: 30px;
+		}
+		
+		h4 {
+			font-size: 19px;
+			line-height: 1.375em;
+			color: #303030;
+			font-weight: 400;
+			margin-bottom: 30px;
+		}  
+	  
+		.navbar {
+			margin-bottom: 0;
+			background-color: #fc8403;
+			z-index: 9999;
+			border: 0;
+			font-size: 12px !important;
+			line-height: 1.42857143 !important;
+			letter-spacing: 4px;
+			border-radius: 0;
+			font-family: Montserrat, sans-serif;
+		}
+		
+		.navbar li a, .navbar .navbar-brand {
+			color: #fff !important;
+		}
+	  
+		.navbar-nav li a:hover, .navbar-nav li.active a {
+			color: #f4511e !important;
+			background-color: #fff !important;
+		}
+	  
+		.navbar-default .navbar-toggle {
+			border-color: transparent;
+			color: #fff !important;
+		}
+		
+		.vid {
+			padding: 20px;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			background-color: #ff8000;
+			height: 600px;
+			width: 600px;
+			margin: auto;
+			border: solid black;
+			padding: 20px;
+			opacity: 0.7;
+			border-radius: 100%;
+		}
+  
+		.custom-file-upload {
+			display: inline-block;
+			padding: 6px 12px;
+			cursor: pointer;
+		}
+
+		body{
+			background: linear-gradient(#ff7700, #ffac00));
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+		
+		.onit {
+			background-color: #fcb103;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>                        
+		  </button>
+		  <br>
+		  <a class="navbar-brand" href="/home">NATURAL DISASTERS</a>
+		</div>
+		<br>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav navbar-right">
+			<li><a href="/home">HOME</a></li>
+			<li><a href="/intro">INTRO</a></li>
+			<li><a href="/upload">LIVE FEED</a></li>
+			<li><a class = "onit" href="/upload">VIDEO UPLOAD</a></li>
+			<li><a href="/image">IMAGE UPLOAD</a></li>
+			<br>
+		  </ul>
+		</div>
+		<br>
+	  </div>
+	</nav>
+	
+	<br><br><br><br><br>
+	<br><br><br><br><br>
+
+     <div class="vid">
+		<br><br><br><br><br>
+		<h1 style="color: white; font-weight: bold;font-family: Segoe UI, sans-serif ;">Upload Video</h1>
+		<br><br><br>
+		<form method="POST" action="" enctype="multipart/form-data">
+			<label class="custom-file-upload">
+				<p><input type="file" name="file1" placeholder="file1" style="
+						align-items: center;
+						justify-content: center;
+						text-align: center;" accept=".mp4,.mkv,.mov,.wmv,.avi"></p>
+					<h5 style="color: white; font-family:Segoe UI, sans-serif ;">*Supported Video Foramts are ( .mp4 .mkv .mov .wmv .avi )</h5> 
+			</label>
+     
+		<br><br>
+		
+		<p><input type="submit" class="btn btn-lg" value="Predict" style="margin: 15px 0;
+						background-color: #fc4803;
+						color: #fff;
+						font-family:Segoe UI, sans-serif ;"></p>
+		</form>
+	</div>
+	
+	<br><br><br><br><br><br>
+
+</body>
+</html>
